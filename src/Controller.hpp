@@ -11,8 +11,9 @@ class Controller {
     Controller();
     void HandleEvents(RenderWindow &window, Snake &snake);
     private:
+    bool isOpposite(std::string newDir);
     std::vector<std::string> queue;
     std::map<std::string, Snake::Direction> movement;
-    Snake::Direction lastDir;
+    std::string lastDir;
     SDL_Event event;
 };
